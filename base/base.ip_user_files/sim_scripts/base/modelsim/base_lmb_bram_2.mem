@@ -1,0 +1,16 @@
+// Mem file initialization records.
+//
+// SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+// Vivado v2022.1 (64-bit)
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Created on Wednesday October 11, 2023 - 04:01:16 am, from:
+//
+//     Map file     - c:\Users\Administrator\AppData\Roaming\Xilinx\Vivado\base\base.gen\sources_1\bd\base\base.bmm
+//     Data file(s) - c:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/base/base.gen/sources_1/bd/base/ip/base_mb_0/data/mb_bootloop_le.elf, c:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/base/base.gen/sources_1/bd/base/ip/base_mb_1/data/mb_bootloop_le.elf, c:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/base/base.gen/sources_1/bd/base/ip/base_mb_2/data/mb_bootloop_le.elf, c:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/base/base.gen/sources_1/bd/base/ip/base_mb_3/data/mb_bootloop_le.elf
+//
+// Address space 'base_i_iop_pmod1_mb.base_i_iop_pmod1_lmb_lmb_bram_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    B8000000

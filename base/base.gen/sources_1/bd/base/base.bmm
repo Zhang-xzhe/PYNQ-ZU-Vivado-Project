@@ -1,0 +1,39 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE iop_grove_lmb_lmb_bram_MEM_DEVICE [0x00010000] 32;
+DEFINE_MEMORY_TYPE iop_pmod0_lmb_lmb_bram_MEM_DEVICE [0x00010000] 32;
+DEFINE_MEMORY_TYPE iop_pmod1_lmb_lmb_bram_MEM_DEVICE [0x00010000] 32;
+DEFINE_MEMORY_TYPE iop_rpi_lmb_lmb_bram_MEM_DEVICE [0x00010000] 32;
+
+ADDRESS_MAP iop_grove_mb MICROBLAZE-LE 100 iop_grove/mb
+   ADDRESS_SPACE iop_grove_lmb_lmb_bram_ADDR_SPACE iop_grove_lmb_lmb_bram_MEM_DEVICE  [0x00000000:0x0000FFFF] iop_grove/lmb/lmb_bram_if_cntlr
+     BUS_BLOCK
+      iop_grove_lmb_lmb_bram_BUS_BLK [31:0] INPUT = "base_lmb_bram_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;
+
+ADDRESS_MAP iop_pmod0_mb MICROBLAZE-LE 100 iop_pmod0/mb
+   ADDRESS_SPACE iop_pmod0_lmb_lmb_bram_ADDR_SPACE iop_pmod0_lmb_lmb_bram_MEM_DEVICE  [0x00000000:0x0000FFFF] iop_pmod0/lmb/lmb_bram_if_cntlr
+     BUS_BLOCK
+      iop_pmod0_lmb_lmb_bram_BUS_BLK [31:0] INPUT = "base_lmb_bram_1.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;
+
+ADDRESS_MAP iop_pmod1_mb MICROBLAZE-LE 100 iop_pmod1/mb
+   ADDRESS_SPACE iop_pmod1_lmb_lmb_bram_ADDR_SPACE iop_pmod1_lmb_lmb_bram_MEM_DEVICE  [0x00000000:0x0000FFFF] iop_pmod1/lmb/lmb_bram_if_cntlr
+     BUS_BLOCK
+      iop_pmod1_lmb_lmb_bram_BUS_BLK [31:0] INPUT = "base_lmb_bram_2.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;
+
+ADDRESS_MAP iop_rpi_mb MICROBLAZE-LE 100 iop_rpi/mb
+   ADDRESS_SPACE iop_rpi_lmb_lmb_bram_ADDR_SPACE iop_rpi_lmb_lmb_bram_MEM_DEVICE  [0x00000000:0x0000FFFF] iop_rpi/lmb/lmb_bram_if_cntlr
+     BUS_BLOCK
+      iop_rpi_lmb_lmb_bram_BUS_BLK [31:0] INPUT = "base_lmb_bram_3.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;
+
